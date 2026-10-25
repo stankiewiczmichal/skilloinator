@@ -1,0 +1,15 @@
+{
+  "name": "shorterinator",
+  "version": "1.0.0",
+  "description": "Turns routines the AI repeats step by step into scripts it runs in one call: analyses the project, proposes what to script, agrees success criteria with the user, tests the script and registers it for later sessions.",
+  "author": {
+    "name": "Michał Stankiewicz"
+  },
+  "license": "CC-BY-NC-SA-4.0",
+  "keywords": [
+    "automation",
+    "scripts",
+    "workflow",
+    "productivity"
+  ]
+}

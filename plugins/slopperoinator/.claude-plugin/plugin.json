@@ -1,0 +1,16 @@
+{
+  "name": "slopperoinator",
+  "version": "1.0.0",
+  "description": "Generates deliberately AI-sounding English or Polish text for parody, training and test data, with slop-density knobs, model personas and an amplifier that hits a target AI-smell score.",
+  "author": {
+    "name": "Michał Stankiewicz"
+  },
+  "license": "CC-BY-NC-SA-4.0",
+  "keywords": [
+    "writing",
+    "parody",
+    "ai-isms",
+    "polish",
+    "test-data"
+  ]
+}

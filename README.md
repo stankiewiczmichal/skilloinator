@@ -4,6 +4,19 @@ Agent skills packaged as plugins. Every skill is a folder with a `SKILL.md`
 in the open [Agent Skills](https://agentskills.io) format, so it works in Claude
 and in other tools that support that format.
 
+## Skills
+
+| Plugin | What it does |
+| --- | --- |
+| `agent-orchestrator` | Splits large or multi-part tasks between named subagents and picks each agent's model and effort. |
+| `humanizator` | Removes AI-isms from English or Polish text: scores it, rewrites it in the author's voice in two passes and checks that no facts changed. |
+| `slopperoinator` | Writes deliberately AI-sounding English or Polish text (parody, workshops, test data) at a chosen slop density and model persona. |
+| `shorterinator` | Turns routines the AI repeats by hand into tested scripts, saved per project or globally and registered so later sessions use them. |
+
+`humanizator` and `slopperoinator` share one scoring engine (`scripts/slop_score.py`
+and `scripts/lexicon/`). Each skill keeps its own copy so it can be installed alone;
+edit both copies together (`scripts/validate.py` checks that they match).
+
 ## Install
 
 ### Claude Code
@@ -11,6 +24,9 @@ and in other tools that support that format.
 ```
 /plugin marketplace add stankiewiczmichal/claude-skills
 /plugin install agent-orchestrator@claude-skills
+/plugin install humanizator@claude-skills
+/plugin install slopperoinator@claude-skills
+/plugin install shorterinator@claude-skills
 ```
 
 ### Claude (claude.ai, desktop, mobile)

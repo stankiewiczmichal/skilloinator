@@ -1,0 +1,16 @@
+{
+  "name": "humanizator",
+  "version": "1.0.0",
+  "description": "Rewrites English or Polish text to remove AI-isms: scores it with a weighted lexicon, templates, Markdown, rhythm and Polish typography, rewrites in the author's voice in two passes and guards the facts.",
+  "author": {
+    "name": "Michał Stankiewicz"
+  },
+  "license": "CC-BY-NC-SA-4.0",
+  "keywords": [
+    "writing",
+    "editing",
+    "ai-isms",
+    "polish",
+    "typography"
+  ]
+}

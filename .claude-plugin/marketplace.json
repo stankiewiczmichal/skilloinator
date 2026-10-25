@@ -14,6 +14,27 @@
       "description": "Splits large or multi-part tasks between named subagents and picks each agent's model and effort to match the difficulty of its subtask.",
       "version": "1.0.0",
       "category": "productivity"
+    },
+    {
+      "name": "humanizator",
+      "source": "./plugins/humanizator",
+      "description": "Rewrites English or Polish text to remove AI-isms: scores it with a weighted lexicon, templates, Markdown, rhythm and Polish typography, rewrites in the author's voice in two passes and guards the facts.",
+      "version": "1.0.0",
+      "category": "productivity"
+    },
+    {
+      "name": "slopperoinator",
+      "source": "./plugins/slopperoinator",
+      "description": "Generates deliberately AI-sounding English or Polish text for parody, training and test data, with slop-density knobs, model personas and an amplifier that hits a target AI-smell score.",
+      "version": "1.0.0",
+      "category": "productivity"
+    },
+    {
+      "name": "shorterinator",
+      "source": "./plugins/shorterinator",
+      "description": "Turns routines the AI repeats step by step into scripts it runs in one call: analyses the project, proposes what to script, agrees success criteria with the user, tests the script and registers it for later sessions.",
+      "version": "1.0.0",
+      "category": "productivity"
     }
   ]
 }

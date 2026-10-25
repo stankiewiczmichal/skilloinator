@@ -8,6 +8,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 NAME_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+# Files copied into several skills so each skill installs on its own; copies must match.
+SHARED = {
+    "scripts/slop_score.py": ["humanizator", "slopperoinator"],
+    "scripts/lexicon/en.json": ["humanizator", "slopperoinator"],
+    "scripts/lexicon/pl.json": ["humanizator", "slopperoinator"],
+}
 errors = []
 
 
@@ -82,6 +88,17 @@ def main():
         name = (load_json(manifest) or {}).get("name")
         if name not in listed:
             err(manifest, f"plugin '{name}' is not listed in marketplace.json")
+
+    for rel, skills in SHARED.items():
+        paths = [ROOT / "plugins" / s / "skills" / s / rel for s in skills]
+        missing = [p for p in paths if not p.is_file()]
+        for p in missing:
+            err(p, "shared file is missing")
+        if not missing and len({p.read_bytes() for p in paths}) > 1:
+            err(paths[0], f"shared copies differ: {', '.join(str(p.relative_to(ROOT)) for p in paths)}")
+        for p in paths:
+            if p.suffix == ".json" and p.is_file():
+                load_json(p)
 
     if errors:
         print("\n".join(f"✗ {e}" for e in errors))

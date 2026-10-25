@@ -1,4 +1,4 @@
-# claude-skills
+# Skilloinator
 
 Agent skills packaged as plugins. Every skill is a folder with a `SKILL.md`
 in the open [Agent Skills](https://agentskills.io) format, so it works in Claude
@@ -22,11 +22,11 @@ edit both copies together (`scripts/validate.py` checks that they match).
 ### Claude Code
 
 ```
-/plugin marketplace add stankiewiczmichal/claude-skills
-/plugin install agent-orchestrator@claude-skills
-/plugin install humanizator@claude-skills
-/plugin install slopperoinator@claude-skills
-/plugin install shorterinator@claude-skills
+/plugin marketplace add stankiewiczmichal/skilloinator
+/plugin install agent-orchestrator@skilloinator
+/plugin install humanizator@skilloinator
+/plugin install slopperoinator@skilloinator
+/plugin install shorterinator@skilloinator
 ```
 
 ### Claude (claude.ai, desktop, mobile)
@@ -41,11 +41,11 @@ As a plugin: Codex reads Claude-compatible marketplaces
 from the Plugins Directory in the ChatGPT desktop app:
 
 ```
-codex plugin marketplace add stankiewiczmichal/claude-skills
+codex plugin marketplace add stankiewiczmichal/skilloinator
 ```
 
 As a single skill: ask Codex
-`$skill-installer install https://github.com/stankiewiczmichal/claude-skills/tree/main/plugins/agent-orchestrator/skills/agent-orchestrator`,
+`$skill-installer install https://github.com/stankiewiczmichal/skilloinator/tree/main/plugins/agent-orchestrator/skills/agent-orchestrator`,
 or copy the skill folder yourself:
 
 ```
